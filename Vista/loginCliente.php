@@ -19,7 +19,8 @@
                 <form action="../Modelo/buscarCliente.php" id="frmCliente" method= "POST">
                     <div class="login-header row">
                         <div class="col-4 return">
-                            <a href="../index.html"><i style="font-size: 30pt; color:black" class="uim uim-arrow-circle-left"></i></a>
+                            <a href="../index.html"><i style="font-size: 30pt; color:black" 
+                            class="uim uim-arrow-circle-left"></i></a>
                         </div>
                         <div class="col-4">
                             <p>CLIENTE</p>
