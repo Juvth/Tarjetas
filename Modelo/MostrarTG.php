@@ -11,7 +11,8 @@
             <td> <?php echo $mostrar['hora'] ?> </td>
             <td> <?php echo $mostrar['descripcion'] ?> </td>
             <td> <?php echo $mostrar['Nombre_grado'] ?> </td>
-            <td> <a href="../Modelo/EliminarTarjetaGrado.php ?id_grado=<?php echo $mostrar['id_grado'] ?>" ><i class="uil uil-trash-alt"></i></a> </td>
+            <td> <a href="../Modelo/EliminarTarjetaGrado.php ?id_grado=<?php 
+            echo $mostrar['id_grado'] ?>" ><i class="uil uil-trash-alt"></i></a> </td>
             <td> <a href="../Modelo/EditarTarjetaGrado.php ?id_grado=<?php echo $mostrar['id_grado'] ?>" ><i class="uil uil-pen"></i> </a> </td>         
         </tr>
     <?php
