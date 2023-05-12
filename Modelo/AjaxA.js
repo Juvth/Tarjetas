@@ -1,7 +1,7 @@
 function registrarA(){
     $(document).ready(function(){
         $('#btnIngresarA').click(function(){
-            var datosA = $('#frmAdmin').serialize();
+            let datosA = $('#frmAdmin').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertarA.php",

@@ -2,7 +2,7 @@ function buscarTCli()
 {
     $(document).ready(function(){
         $('#btnbuscarT').click(function(){
-            var datos = $('#frm')
+            let datos = $('#frm')
         });
 
     });
@@ -12,7 +12,7 @@ function buscarTCli()
 function registrarC(){
     $(document).ready(function(){
         $('#btningresarC').click(function(){
-            var datos = $('#frmRCliente').serialize();
+            let datos = $('#frmRCliente').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertar.php",

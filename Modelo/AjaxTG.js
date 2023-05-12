@@ -1,7 +1,7 @@
 function registrarTG(){
     $(document).ready(function(){
         $('#btnIngresarTG').click(function(){
-            var datosTG = $('#frmTarjetaGrado').serialize();
+            let datosTG = $('#frmTarjetaGrado').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertarTG.php",

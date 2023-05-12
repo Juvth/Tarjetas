@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="../CSS/tablas.css">
@@ -36,7 +36,7 @@
     </div>
 
     <div class="datos">
-        <form action="../index.html" id="frmRTarjetaBautizo" method= "POST">           
+        <form action="../index.html" id="frmRTarjetaBautizo" method= "POST">
             <table class="table col-lg-auto" border="1">
                 <thead class="thead-dark">
                     <tr>
@@ -54,7 +54,7 @@
                     $cedula= $_POST['cedula'];
                     include("../Config/conexion.php");
                     $sql="SELECT * FROM trj_grado WHERE cedula_cliente='$cedula'";
-                    $resultado=mysqli_query($conexion, $sql);   
+                    $resultado=mysqli_query($conexion, $sql);
 
                     while ($mostrar = mysqli_fetch_array($resultado)) {
                 ?>
@@ -71,9 +71,10 @@
                     }
                 ?>
                 </tbody>
-            </table>      
+            </table>
         </form>
     </div>
 </div>
 </body>
 </html>
+        
