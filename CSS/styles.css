@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    padding: 5px;
+    background-color: cornflowerblue;
+}
+
+.image img{
+    width: 60px;
+    border-radius: 100%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+.users{
+    display: flex;
+    align-items: center;
+}
+
+.user, .user a{
+    text-align: right;
+    color: aliceblue;
+}
+
+.banner-img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.banner-img img{
+    width: 100%;
+    border-radius: 20%;
+}
+
+.banner-title{
+    display: flex;
+    align-items: center;
+    font-size: 55pt;
+    text-align: center;
+    font-weight: 800;
+}
+
+.footer{
+    position:fixed;
+    width: 100%;
+    bottom:0; 
+    background-color: dimgray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nombres li{
+    list-style: none;
+    color: aliceblue;
+    display: inline;
+}
+
+.espoch img{
+    width: 100px;
+    float: right;
+}
