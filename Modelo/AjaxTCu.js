@@ -1,7 +1,7 @@
 function registrarTCu(){
     $(document).ready(function(){
         $('#btnIngresarTCu').click(function(){
-            let datosTCu = $('#frmTarjetaCumple').serialize();
+            var datosTCu = $('#frmTarjetaCumple').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertarTCu.php",

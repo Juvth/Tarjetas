@@ -1,7 +1,7 @@
 function registrarTB(){
     $(document).ready(function(){
         $('#btnIngresarTB').click(function(){
-            let datosBT = $('#frmTarjetaBautizo').serialize();
+            var datosBT = $('#frmTarjetaBautizo').serialize();
             $.ajax({
                 type:"POST",
                 url:"insertarTB.php",

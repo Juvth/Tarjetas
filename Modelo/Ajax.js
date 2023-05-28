@@ -1,7 +1,7 @@
 function registrarC(){
     $(document).ready(function(){
         $('#btningresarC').click(function(){
-            let datos = $('#frmRCliente').serialize();
+            var datos = $('#frmRCliente').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertar.php",
