@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../IMG/logincliente.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register{
+    background-color:darkgrey;
+    width: 300px;
+    height: max-content;
+    padding: 10px;
+}
+
+
+.login-header p{
+    font-weight:800;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.login-info{
+    margin: 10px 15px;
+}
+
+.datos label{
+    font-weight: bolder;
+}
+
+.datos input{
+    margin-top: 5px;
+    padding: 2px 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.datos{
+    margin-top: 30px;
+}
+
+.buttons{
+    margin-top: 40px;
+    display: flex;
+}
+
+
+.buttons a{
+    width: 50%;
+    margin-right: 15px;
+}
+
+.buttons input{
+    width: 50%;
+    float: right;
+}
+
+.admin{
+    display: flex;
+}
+
+.admin .btn-info{
+    margin-right: 10px;
+}
+
+.tarjeta{
+    background-image: none;
+}

@@ -1,0 +1,44 @@
+.login-header p{
+    margin: 20px;
+    font-weight:800;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.login-info{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px,auto);
+}
+
+.datos label{
+    font-weight: bolder;
+}
+
+.datos input{
+    margin-top: 5px;
+    padding: 2px 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.datos{
+    margin-top: 15px;
+    width: 80%;
+}
+
+.buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons input{
+    margin-top: 40px;
+    width: 200px;
+    height: 80px;
+    font-size: 20pt;
+    font-weight: 600;
+}
