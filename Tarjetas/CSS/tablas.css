@@ -1,0 +1,52 @@
+.header{
+    padding: 5px;
+    background-color: cornflowerblue;
+}
+
+.image img{
+    width: 60px;
+    border-radius: 100%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+.users{
+    display: flex;
+    align-items: center;
+}
+
+.user, .user a{
+    text-align: right;
+    color: aliceblue;
+}
+
+.title-table{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30pt;
+    font-weight: 800;
+}
+
+.datos{
+    width: 90%;
+    margin: auto;
+}
+
+.datos table{
+    text-align: center;
+}
+
+.datos td i{
+    font-size: 18pt;
+}
+
+.bautizo input{
+width: 100%;
+}
+
+.bautizo{
+    width: 100%;
+}

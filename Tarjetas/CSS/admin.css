@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: inline-block;
+    background-color: cornflowerblue;
+    padding: 5px;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30pt;
+    font-weight: 800;
+    height: 200px;
+    background-color:beige;
+    margin: 10px;
+}

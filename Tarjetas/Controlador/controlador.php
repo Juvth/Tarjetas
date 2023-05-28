@@ -1,0 +1,99 @@
+<?php
+
+$v1=$_GET['var1'];
+if($v1==1){
+    include("../Vista/loginCliente.php");
+}else{
+    if($v1==2){
+        include("../Vista/loginAdmin.php");
+    }else{
+        if($v1==3){
+            include("../Vista/MostrarCliente.php");
+        }else{
+            if($v1==6){
+                include("../Vista/registrarAdmin.php");
+            }else{
+                if($v1==7){
+                    include("../Vista/registrarTarjetaBautizo.php");
+                }else{
+                    if($v1==8){
+                        include("../Vista/registrarTarjetaBoda.php");
+                    }else{
+                        if($v1==9){
+                            include("../Vista/registrarTarjetaGrado.php");
+                        }else{
+                            if($v1==10){
+                                include("../Vista/registrarTarjetaCumple.php");
+                            }else{
+                                if($v1==11){
+                                    include("../Vista/MostrarTarjetaBautizo.php");
+                                }else{
+                                    if($v1==12){
+                                        include("../Vista/MostrarTarjetaBoda.php");
+                                    }else{
+                                        if($v1==13){
+                                            include("../Vista/MostrarTarjetaGrado.php");
+                                        }else{
+                                            if($v1==14){
+                                                include("../Vista/MostrarTarjetaCumple.php");
+                                            }else{
+                                                if($v1==15){
+                                                    include("../Vista/BuscarClienteVista.php");
+                                                }
+                                                else {
+                                                    if ($v1==16){
+                                                        include("../Vista/BuscarTrjBD.php");
+                                                    }
+                                                    else{
+                                                        if($v1==17){
+                                                            include("../Vista/BuscarTrjGrado.php");
+                                                        }
+                                                        else{
+                                                            if($v1==18){
+                                                                include("../Vista/BuscarTrjBautizo.php");
+                                                            }
+                                                            else{
+                                                                if($v1==19){
+                                                                    include("../Vista/BuscarTrjCumple.php");
+                                                                }else{
+                                                                    if($v1==20){
+                                                                        include("../Modelo/Reporte1.php");
+                                                                    }else{
+                                                                        if($v1==21){
+                                                                            include("../Modelo/Reporte2.php");
+                                                                        }else{
+                                                                            if($v1==22){
+                                                                                include("../Modelo/Reporte3.php");
+                                                                            }else{
+                                                                                if($v1==23){
+                                                                                    include("../Modelo/Reporte8.php");
+                                                                                }else{
+                                                                                    if($v1==24){
+                                                                                        include("../Modelo/Reporte4.php");
+                                                                                    }else{
+                                                                                        if($v1==25){
+                                                                                            include("../Modelo/Reporte5.php");
+                                                                                        }else{
+                                                                                            if($v1==26){
+                                                                                                include("../Modelo/Reporte6.php");
+                                                                                            }else{
+                                                                                                if($v1==27){
+                                                                                                    include("../Modelo/Reporte7.php");
+                                                                                                }}}}}}}}}}
+                                                            }
+                                                        }
+ 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+?>
