@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Cliente</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../CSS/login.css">
     <script src="../Modelo/Ajax.js"></script>
 </head>
@@ -19,8 +18,7 @@
                 <form action="../Modelo/buscarCliente.php" id="frmCliente" method= "POST">
                     <div class="login-header row">
                         <div class="col-4 return">
-                            <a href="../index.html"><i style="font-size: 30pt; color:black" 
-                            class="uim uim-arrow-circle-left"></i></a>
+                            <a href="../index.html"><i style="font-size: 30pt; color:black" class="uim uim-arrow-circle-left"></i></a>
                         </div>
                         <div class="col-4">
                             <p>CLIENTE</p>

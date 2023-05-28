@@ -1,7 +1,7 @@
 function registrarTBoda(){
     $(document).ready(function(){
         $('#btnIngresarTBoda').click(function(){
-            let datosTBoda = $('#frmTarjetaBoda').serialize();
+            var datosTBoda = $('#frmTarjetaBoda').serialize();
             $.ajax({
                 type:"POST",
                 url:"../Modelo/insertarTBoda.php",
