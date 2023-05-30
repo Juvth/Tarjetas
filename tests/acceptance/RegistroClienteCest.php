@@ -1,4 +1,5 @@
 <?php
+// tests/acceptance/RegistroCienteCest.php
 
 class RegistroClienteCest
 {
@@ -7,19 +8,18 @@ class RegistroClienteCest
         // Configuración inicial, si es necesaria
     }
 
-    // tests
+    // Prueba de aceptación para el registro de un cliente
     public function registroCliente(AcceptanceTester $I)
     {
-        // Ingresar a la página de registro clientes
-        $I->amOnPage('/ruta-del-formulario-de-registro-cliente');
+        // Ingresar a la página de registro
+        $I->amOnPage('/registro.html');
 
         // Rellenar el formulario con datos de prueba
-        $I->fillField('direccion', 'Avenida simon bolivar y bolivar bonilla');
-        $I->fillField('usuario', 'DennysMejia');
-        $I->fillField('telefono', '0983476533');
-        $I->fillField('cedula', '0605830025');
-        $I->fillField('contraseña', '12345');
-       
+        $I->fillField('direccion', 'Dirección de prueba');
+        $I->fillField('usuario', 'Usuario de prueba');
+        $I->fillField('telefono', '123456789');
+        $I->fillField('cedula', '1234567890');
+        $I->fillField('contraseña', 'contraseña123');
 
         // Enviar el formulario
         $I->click('Enviar');
@@ -27,13 +27,13 @@ class RegistroClienteCest
         // Verificar que se redireccionó correctamente después del registro
         $I->seeInCurrentUrl('/index.html');
 
-        // Verificar que se haya insertado el grado en la base de datos
+        // Verificar que se haya insertado el cliente en la base de datos
         $I->seeInDatabase('cliente', [
-            'direccion' => 'Avenida simon bolivar y bolivar bonilla',
-            'usuario' => 'DennysMejia',
-            'telefono' => '0983476533',
-            'cedula' => '0605830025',
-            'contraseña' => '12345',
+            'direccion' => 'Dirección de prueba',
+            'usuario' => 'Usuario de prueba',
+            'telefono' => '123456789',
+            'cedula' => '1234567890',
+            'contraseña' => 'contraseña123',
         ]);
     }
 }
