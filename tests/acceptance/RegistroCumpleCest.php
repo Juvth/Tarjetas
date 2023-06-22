@@ -12,7 +12,7 @@ class RegistroCumpleCest
     public function registroCumple(AcceptanceTester $I)
     {
         // Ingresar a la página de registro de cumpleaños
-        $I->amOnPage('/ruta-del-formulario-de-registro-cumple');
+        $I->amOnPage('../../Vista/registrarTarjetaCumple.php');
 
         // Rellenar el formulario con datos de prueba
         $I->fillField('nombre_cumple', 'Nombre del Cumpleañero');

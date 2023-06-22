@@ -12,7 +12,7 @@ class RegistroBautizoCest
     public function registroBautizo(AcceptanceTester $I)
     {
         // Ingresar a la página de registro de bautizo
-        $I->amOnPage('/ruta-del-formulario-de-registro-bautizo');
+        $I->amOnPage('../../Vista/registrarTarjetaBautizo.php');
 
         // Rellenar el formulario con datos de prueba
         $I->fillField('id_bautizo', '123');

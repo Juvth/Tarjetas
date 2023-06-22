@@ -12,7 +12,7 @@ class RegistroBodaCest
     public function registroBoda(AcceptanceTester $I)
     {
         // Ingresar a la página de registro de boda
-        $I->amOnPage('/ruta-del-formulario-de-registro-boda');
+        $I->amOnPage('../../Vista/registrarTarjetaBoda.php');
 
         // Rellenar el formulario con datos de prueba
         $I->fillField('nombre_Novio', 'Nombre del Novio');

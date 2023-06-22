@@ -12,7 +12,7 @@ class RegistroGradoCest
     public function registroGrado(AcceptanceTester $I)
     {
         // Ingresar a la página de registro de grado
-        $I->amOnPage('../Vista/registrarTarjetaGrado.php');
+        $I->amOnPage('../../Vista/registrarTarjetaGrado.php');
 
         // Rellenar el formulario con datos de prueba
         $I->fillField('id_grado', '123');

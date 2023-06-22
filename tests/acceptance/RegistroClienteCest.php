@@ -12,7 +12,7 @@ class RegistroClienteCest
     public function registroCliente(AcceptanceTester $I)
     {
         // Ingresar a la página de registro
-        $I->amOnPage('/registro.html');
+        $I->amOnPage('../../vista/registrarCliente.php');
 
         // Rellenar el formulario con datos de prueba
         $I->fillField('direccion', 'Dirección de prueba');
@@ -35,5 +35,7 @@ class RegistroClienteCest
             'cedula' => '1234567890',
             'contraseña' => 'contraseña123',
         ]);
+        Assert::assertTrue($I->grabFromDatabase('cliente', ['direccion' => 'Dirección de prueba']) !== false);
+        Assert::assertEquals('Usuario de prueba', $I->grabFromDatabase('cliente', ['usuario' => 'Usuario de prueba']));
     }
 }

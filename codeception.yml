@@ -8,3 +8,14 @@ actor_suffix: Tester
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+modules:
+    enabled:
+        - PhpBrowser:
+            url: 'http://localhost/Tarjetas/Tarjetas'
+        - Db
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=tarjetas'
+            user: 'root'
+            password: ''
+            dump: 'tests/_data/tarjetas.sql'
