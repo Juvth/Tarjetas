@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of PHPUnit.
  *
@@ -9,47 +9,49 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+use function ini_set;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
-class ExceptionMessageRegExpTest extends TestCase
+/**
+ * @small
+ */
+final class ExceptionMessageRegExpTest extends TestCase
 {
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessageRegExp /^A polymorphic \w+ message/
-     */
     public function testRegexMessage(): void
     {
-        throw new \Exception('A polymorphic exception message');
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessageMatches('/^A polymorphic \w+ message/');
+
+        throw new Exception('A polymorphic exception message');
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessageRegExp /^a poly[a-z]+ [a-zA-Z0-9_]+ me(s){2}age$/i
-     */
     public function testRegexMessageExtreme(): void
     {
-        throw new \Exception('A polymorphic exception message');
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessageMatches('/^a poly[a-z]+ [a-zA-Z0-9_]+ me(s){2}age$/i');
+
+        throw new Exception('A polymorphic exception message');
     }
 
     /**
      * @runInSeparateProcess
      * @requires extension xdebug
-     * @expectedException \Exception
-     * @expectedExceptionMessageRegExp #Screaming preg_match#
      */
     public function testMessageXdebugScreamCompatibility(): void
     {
-        \ini_set('xdebug.scream', '1');
+        ini_set('xdebug.scream', '1');
 
-        throw new \Exception('Screaming preg_match');
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessageMatches('#Screaming preg_match#');
+
+        throw new Exception('Screaming preg_match');
     }
 
-    /**
-     * @expectedException \Exception variadic
-     * @expectedExceptionMessageRegExp /^A variadic \w+ message/
-     */
-    public function testSimultaneousLiteralAndRegExpExceptionMessage(): void
+    public function testRegExMessageCanBeExportedAsString(): void
     {
-        throw new \Exception('A variadic exception message');
+        $exceptionMessageReExp = new ExceptionMessageRegularExpression('/^a poly[a-z]+ [a-zA-Z0-9_]+ me(s){2}age$/i');
+
+        $this->assertSame('exception message matches ', $exceptionMessageReExp->toString());
     }
 }

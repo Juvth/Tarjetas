@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of PHPUnit.
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace PHPUnit\TestFixture;
+
 use PHPUnit\Framework\TestCase;
 
 class RequirementsTest extends TestCase
@@ -73,6 +75,15 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @requires function testFunc2
+     *
+     * @see https://github.com/sebastianbergmann/phpunit/issues/3459
+     */
+    public function testRequiresFunctionWithDigit(): void
+    {
+    }
+
+    /**
      * @requires extension testExt
      */
     public function testTen(): void
@@ -89,12 +100,12 @@ class RequirementsTest extends TestCase
 
     /**
      * @requires PHP 99-dev
-     * @requires PHPUnit 9-dev
+     * @requires PHPUnit 99-dev
      * @requires OS DOESNOTEXIST
      * @requires function testFuncOne
-     * @requires function testFuncTwo
+     * @requires function testFunc2
      * @requires extension testExtOne
-     * @requires extension testExtTwo
+     * @requires extension testExt2
      * @requires extension testExtThree 2.0
      * @requires setting not_a_setting Off
      */
@@ -174,6 +185,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator less than
      * @requires PHP < 5.4
      */
     public function testPHPVersionOperatorLessThan(): void
@@ -181,6 +193,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator less than or equals
      * @requires PHP <= 5.4
      */
     public function testPHPVersionOperatorLessThanEquals(): void
@@ -188,6 +201,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator greater than
      * @requires PHP > 99
      */
     public function testPHPVersionOperatorGreaterThan(): void
@@ -195,6 +209,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator greater than or equals
      * @requires PHP >= 99
      */
     public function testPHPVersionOperatorGreaterThanEquals(): void
@@ -202,6 +217,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator equals
      * @requires PHP = 5.4
      */
     public function testPHPVersionOperatorEquals(): void
@@ -209,6 +225,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator double equals
      * @requires PHP == 5.4
      */
     public function testPHPVersionOperatorDoubleEquals(): void
@@ -216,6 +233,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator bang equals
      * @requires PHP != 99
      */
     public function testPHPVersionOperatorBangEquals(): void
@@ -223,6 +241,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator not equals
      * @requires PHP <> 99
      */
     public function testPHPVersionOperatorNotEquals(): void
@@ -230,6 +249,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHP version operator no space
      * @requires PHP >=99
      */
     public function testPHPVersionOperatorNoSpace(): void
@@ -237,6 +257,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator less than
      * @requires PHPUnit < 1.0
      */
     public function testPHPUnitVersionOperatorLessThan(): void
@@ -244,6 +265,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator less than equals
      * @requires PHPUnit <= 1.0
      */
     public function testPHPUnitVersionOperatorLessThanEquals(): void
@@ -251,6 +273,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator greater than
      * @requires PHPUnit > 99
      */
     public function testPHPUnitVersionOperatorGreaterThan(): void
@@ -258,6 +281,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator greater than or equals
      * @requires PHPUnit >= 99
      */
     public function testPHPUnitVersionOperatorGreaterThanEquals(): void
@@ -265,6 +289,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator equals
      * @requires PHPUnit = 1.0
      */
     public function testPHPUnitVersionOperatorEquals(): void
@@ -272,6 +297,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator double equals
      * @requires PHPUnit == 1.0
      */
     public function testPHPUnitVersionOperatorDoubleEquals(): void
@@ -279,6 +305,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator bang equals
      * @requires PHPUnit != 99
      */
     public function testPHPUnitVersionOperatorBangEquals(): void
@@ -286,6 +313,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator not equals
      * @requires PHPUnit <> 99
      */
     public function testPHPUnitVersionOperatorNotEquals(): void
@@ -293,6 +321,7 @@ class RequirementsTest extends TestCase
     }
 
     /**
+     * @testdox PHPUnit version operator no space
      * @requires PHPUnit >=99
      */
     public function testPHPUnitVersionOperatorNoSpace(): void

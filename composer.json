@@ -1,16 +1,22 @@
 {
-    "name": "boby/test",
+    "name": "msi/tarjetas",
     "autoload": {
         "psr-4": {
-            "Boby\\Test\\": "src/"
+            "Msi\\Tarjetas\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "mariano",
+            "email": "mariano.vallejo@espoch.edu.ec"
+        }
+    ],
     "require-dev": {
         "codeception/codeception": "^4.2",
         "codeception/module-phpbrowser": "^1.0.0",
         "codeception/module-asserts": "^1.0.0",
         "codeception/module-db": "^2.1",
-        "phpunit/phpunit": "7.5"
+        "phpunit/phpunit": "9.5"
 
         
     }

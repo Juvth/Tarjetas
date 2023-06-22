@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-class IntegrationTest extends TestCase
+class insertarTBTest extends TestCase
 {
     public function testInsertDataIntoTrjBautizoTable()
     {

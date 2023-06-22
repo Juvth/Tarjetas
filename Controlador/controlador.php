@@ -2,7 +2,7 @@
 
 $v1=$_GET['var1'];
 if($v1==1){
-    include("../Vista/loginCliente.php");
+    include("../Vista/loginCliente.html");
 }else{
     if($v1==2){
         include("../Vista/loginAdmin.php");
@@ -38,7 +38,7 @@ if($v1==1){
                                                 include("../Vista/MostrarTarjetaCumple.php");
                                             }else{
                                                 if($v1==15){
-                                                    include("../Vista/BuscarClienteVista.php");
+                                                    include("../Vista/BuscarClienteVista.html");
                                                 }
                                                 else {
                                                     if ($v1==16){
