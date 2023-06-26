@@ -51,26 +51,41 @@
                 </thead>
                 <tbody>
                 <?php
-                    $cedula= $_POST['cedula'];
-                    include("../Config/conexion.php");
-                    $sql="SELECT * FROM trjbautizo WHERE cedula_cliente='$cedula'";
-                    $resultado=mysqli_query($conexion,$sql);  
+                        $cedula = $_POST['cedula'];
+                        include("../Config/conexion.php");
 
-                    while($mostrar = mysqli_fetch_array($resultado)){
-                ?>
-                    <tr>
-                        <td> <?php echo $mostrar['id_bautizo'] ?> </td>
-                        <td> <?php echo $mostrar['iglesia'] ?> </td>
-                        <td> <?php echo $mostrar['recepcion'] ?> </td>
-                        <td> <?php echo $mostrar['edad'] ?> </td>
-                        <td> <?php echo $mostrar['nombre'] ?> </td>
-                        <td> <?php echo $mostrar['padrinos'] ?> </td>
-                        <td> <?php echo $mostrar['fecha'] ?> </td>
-                        <td> <?php echo $mostrar['hora'] ?> </td>
-                    </tr>
-                <?php
-                    }
-                ?>
+                        
+                        if (preg_match('/^[0-9]{10}$/', $cedula)) {
+                            $sql = "SELECT * FROM trjbautizo WHERE cedula_cliente='$cedula'";
+                            $resultado = mysqli_query($conexion, $sql);
+
+                            if(mysqli_num_rows($resultado) > 0) {
+                                while($mostrar = mysqli_fetch_array($resultado)){
+
+                    ?>
+                        <tr>
+                            <td> <?php echo $mostrar['id_bautizo'] ?> </td>
+                            <td> <?php echo $mostrar['iglesia'] ?> </td>
+                            <td> <?php echo $mostrar['recepcion'] ?> </td>
+                            <td> <?php echo $mostrar['edad'] ?> </td>
+                            <td> <?php echo $mostrar['nombre'] ?> </td>
+                            <td> <?php echo $mostrar['padrinos'] ?> </td>
+                            <td> <?php echo $mostrar['fecha'] ?> </td>
+                            <td> <?php echo $mostrar['hora'] ?> </td>
+                        </tr>
+                        <?php
+                                }
+                            } else {
+                        ?>
+                            <p>El cliente no esta registrado en el sistema.</p>
+                        <?php
+                            }
+                        } else {
+                        ?>
+                            <p>El número de cédula ingresado no es válido.</p>
+                        <?php
+                        }   
+                        ?>
                 </tbody>
             </table>      
         </form>
